@@ -84,16 +84,95 @@
          *https://sql.sh/fonctions/length
          */
 
-        $fonctionsSql = "SELECT LENGTH(prenom) FROM Inscrits";
+        // $fonctionsSql = "SELECT LENGTH(prenom) FROM Inscrits";
 
-        $requete = $connexion->prepare($fonctionsSql);
-        $requete->execute();
+        // $requete = $connexion->prepare($fonctionsSql);
+        // $requete->execute();
 
-        $resultats = $requete->fetchAll();
+        // $resultats = $requete->fetchAll();
 
-        echo "<pre>";
-        print_r($resultats);
-        echo "</pre>";
+        // echo "<pre>";
+        // print_r($resultats);
+        // echo "</pre>";
+
+        /***********************************7 ROUND*************************************************** */
+
+        /**
+         *permet d’arrondir un résultat numérique
+         *https://sql.sh/fonctions/round
+         */
+
+        // $fonctionsSql = "SELECT ROUND(don,1) FROM Inscrits";
+
+        // $requete = $connexion->prepare($fonctionsSql);
+        // $requete->execute();
+
+        // $resultats = $requete->fetchAll();
+
+        // echo "<pre>";
+        // print_r($resultats);
+        // echo "</pre>";
+
+        /***********************************8 NOW*************************************************** */
+
+        /**
+         *permet de retourner la date et l’heure du système. 
+         *Cette fonction est très pratique pour enregistrer la date et l’heure
+         *d’ajout ou de modification d’une donnée, dans un DATETIME ou un DATE(). 
+         *Cela permet de savoir exactement le moment où a été ajouté une donnée contenu dans une table.
+         *https://sql.sh/fonctions/now
+         */
+
+        // $fonctionsSql = "SELECT prenom, NOW() FROM Inscrits";
+
+        // $requete = $connexion->prepare($fonctionsSql);
+        // $requete->execute();
+
+        // $resultats = $requete->fetchAll();
+
+        // echo "<pre>";
+        // print_r($resultats);
+        // echo "</pre>";
+
+        /***********************************8 GROUP BY*************************************************** */
+
+        /**
+         *pour grouper plusieurs résultats et utiliser une fonction de totaux sur un groupe de résultat.
+         *https://sql.sh/cours/group-by
+         */
+
+        // $fonctionsSql = "SELECT AVG(DON),age FROM Inscrits GROUP BY age";
+
+        // $requete = $connexion->prepare($fonctionsSql);
+        // $requete->execute();
+
+        // $resultats = $requete->fetchAll();
+
+        // echo "<pre>";
+        // print_r($resultats);
+        // echo "</pre>";
+
+        /***********************************9 HAVING*************************************************** */
+
+        /**
+         *La condition HAVING en SQL est presque similaire à WHERE 
+         *à la seule différence que HAVING permet de filtrer 
+         *utilisant des fonctions telles que SUM(), COUNT(), AVG(), MIN() ou MAX().
+         *https://sql.sh/cours/having
+         */
+
+        // $fonctionsSql = "SELECT AVG(DON),age FROM Inscrits GROUP BY age HAVING AVG(don) >10";
+
+        // $requete = $connexion->prepare($fonctionsSql);
+        // $requete->execute();
+
+        // $resultats = $requete->fetchAll();
+
+        // echo "<pre>";
+        // print_r($resultats);
+        // echo "</pre>";
+
+
     } catch (PDOException $e) {
 
         echo "Echec de la connexion: " . $e->getMessage();
